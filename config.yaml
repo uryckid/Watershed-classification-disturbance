@@ -1,0 +1,16 @@
+# Configuration for Constrained Grid Search Clustering Experiments
+
+clustering:
+  algorithm: k-means
+  parameters:
+    n_clusters: [3, 5, 7, 9]
+    init: random
+    max_iter: 300
+    tolerance: 0.0001
+    random_state: 42
+
+search:
+  method: grid
+  n_jobs: -1
+  cv: 5
+  scoring: silhouette_score
